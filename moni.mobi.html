@@ -1,0 +1,130 @@
+# Create a simple PWA-style HTML page for "MoniShop"
+
+monishop_pwa_html = """
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moni mobile palace</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: 'Noto Sans Bengali', sans-serif;
+      margin: 0;
+      background: #f5fff8;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #e8f5e9;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      font-weight: bold;
+    }
+    nav a {
+      color: #2e7d32;
+      text-decoration: none;
+    }
+    section {
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+      padding: 15px;
+    }
+    footer {
+      background: #c8e6c9;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+    button, input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Moni mobile palace</h1>
+  <p>আপনার বিশ্বস্ত মোবাইল সঙ্গী</p>
+</header>
+
+<nav>
+  <a href="#products">📱 পণ্যসমূহ</a>
+  <a href="#order">📝 অর্ডার</a>
+  <a href="#contact">📞 যোগাযোগ</a>
+  <a href="#offers">📰 অফার</a>
+</nav>
+
+<section id="products">
+  <h2>📱 আমাদের পণ্য</h2>
+  <div class="product">
+    <h3>Mobile Phone</h3>
+  </div>
+  <div class="product">
+    <h3>Mobile Accessories</h3>
+  </div>
+  <div class="product">
+    <h3>Mobile,Computer,Laptop Survising</h3>
+  </div>
+</section>
+
+<section id="order">
+  <h2>📝 অর্ডার করুন</h2>
+  <form>
+    <input type="text" placeholder="আপনার নাম" required />
+    <input type="tel" placeholder="মোবাইল নম্বর" required />
+    <textarea placeholder="আপনার ঠিকানা" rows="3" required></textarea>
+    <input type="text" placeholder="অর্ডারকৃত পণ্যের নাম" required />
+    <button type="submit">অর্ডার দিন</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>📞 যোগাযোগ</h2>
+  <p>📱 +8801763071247</p>
+  <p>📍 Prince Plaza, Madaripur Bazar, Tanore, Rajshahi</p>
+  <a href="tel:+8801763071247"><button>এক কলেই অর্ডার</button></a>
+</section>
+
+<section id="offers">
+  <h2>📰 চলমান অফার</h2>
+  <p>নতুন ইউজারদের জন্য ১০% ছাড়! সীমিত সময়ের জন্য।</p>
+</section>
+
+<footer>
+  &copy; 2025 MoniShop | Designed as a Progressive Web App
+</footer>
+
+</body>
+</html>
+"""
+
+# Save the HTML file
+pwa_file_path = "/mnt/data/monishop_pwa.html"
+with open(pwa_file_path, "w", encoding="utf-8") as f:
+    f.write(monishop_pwa_html)
+
+pwa_file_path
